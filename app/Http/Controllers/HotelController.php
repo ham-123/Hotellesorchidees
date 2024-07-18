@@ -8,21 +8,21 @@ class HotelController extends Controller
 {
     public function chambre()
     {
-        return view('pages.chambres');
+        return view('chambres');
     }
 
     public function appartements()
     {
-        return view('pages.appartements');
+        return view('appartements');
     }
 
     public function restaurant()
     {
-        return view('pages.restaurant');
+        return view('restaurant');
     }
 
     public function contact()
     {
-        return view('pages.contact');
+        return view('contact');
     }
 }

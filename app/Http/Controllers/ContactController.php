@@ -18,12 +18,13 @@ class ContactController extends Controller
         ]);
 
         // Envoyer l'email
-
         try {
-            Mail::to('hamidtchemoko9@gmail.com')->send(new ContactFormMail($validatedData));
+            // Envoi de l'e-mail à l'adresse configurée dans la classe Mail
+            Mail::to('contact@hotellesorchidees.com')->send(new ContactFormMail($validatedData));
 
             return back()->with('success', 'Votre message a été envoyé avec succès!');
         } catch (\Exception $e) {
+            // En cas d'erreur, retour à la page précédente avec un message d'erreur
             return back()->with('error', 'Une erreur est survenue lors de l\'envoi de l\'e-mail. Veuillez réessayer plus tard.');
         }
     }

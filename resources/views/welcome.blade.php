@@ -82,56 +82,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form class="w-100" action="#" method="post">
-                        <div class="row">
-                            <div id="datepairExample" class="col-lg-4 col-sm-6">
-                                <div class="row">
-                                    <div class="form-group col-lg-6 col-sm-6">
-                                        <label class="text-dark">Date d'arrivée</label>
-                                        <input type="text" name="date1" class="date start form-control"
-                                            placeholder="MM/DD/YYYY">
-                                    </div>
-                                    <div class="form-group col-lg-6 col-sm-6">
-                                        <label class="text-dark">Date de départ</label>
-                                        <input type="text" name="date2" class="date end form-control"
-                                            placeholder="MM/DD/YYYY">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-2 col-sm-6">
-                                <label class="text-dark">Chambres</label>
-                                <div class="quantity">
-                                    <input type="number" class="form-control" min="1" max="50" step="1"
-                                        value="1">
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-2 col-sm-6">
-                                <label class="text-dark">Personnes</label>
-                                <div class="quantity">
-                                    <input type="number" class="form-control" min="1" max="50"
-                                        step="1" value="1">
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-2 col-sm-6">
-                                <label class="text-dark">Type de chambre</label>
-                                <select class="selectpicker form-control">
-                                    <option>Normal</option>
-                                    <option>Simple</option>
-                                    <option>Famille</option>
-                                    <option>Luxe</option>
-                                    <option>Lune de miel</option>
-                                    <option>Chambre duplex</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-lg-2 col-sm-6">
-                                <input type="submit" class="btn btn-primary-bg w-100 mt-30" value="Vérifier ">
-                            </div>
-                        </div>
-                    </form>
+                    <a href="{{ route('chambres') }}" class="btn btn-primary btn-block">Vérifier la disponibilité des chambres</a>
                 </div>
             </div>
         </div>
     </div>
+    
+    
     <!-- Fin de la section Recherche de propriété-->
 
     <!-- Section Début de Nos Salons -->
@@ -148,6 +105,7 @@
                 </div>
             </div>
             <div class="row">
+                <!-- Chambre Classique -->
                 <div class="col-md-6 col-lg-4">
                     <div class="room-thumb-grid-1 hover_zoom bg-white mb-4">
                         <div class="thumb-top position-relative">
@@ -155,19 +113,21 @@
                                 <li><i class="flaticon-tv"></i></li>
                                 <li><i class="flaticon-wifi"></i></li>
                             </ul>
-                            <div class="room-size upper-place-bottom-right">12 X 15 Sqft</div>
-                            <div class="overflow_hidden"><img src="img/chambres/1.jpg" alt="Booking Room"></div>
+                            <div class="overflow_hidden"><img src="img/chambres/1.jpg" alt="Chambre Classique"></div>
                         </div>
                         <div class="room-info p-4">
                             <div class="down-line-left mb-3">
-                                <h6 class="title"><a class="text-secondary" href="#">Chambre Classique</a></h6>
+                                <h6 class="title"><a class="text-secondary"
+                                        href="{{ route('chambres.classique') }}">Chambre Classique</a></h6>
                                 <span>Lit double</span>
                             </div>
-                            <div class="h5 per-night text-secondary">$80<small>/Nuit</small></div>
-                            <a href="#" class="btn btn-primary float-right">Réserver maintenant</a>
+                            <a href="{{ route('chambres.classique') }}" class="btn btn-primary float-right">Réserver
+                                </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Chambre Standard -->
                 <div class="col-md-6 col-lg-4">
                     <div class="room-thumb-grid-1 hover_zoom bg-white mb-4">
                         <div class="thumb-top position-relative">
@@ -175,39 +135,92 @@
                                 <li><i class="flaticon-tv"></i></li>
                                 <li><i class="flaticon-wifi"></i></li>
                             </ul>
-                            <div class="overflow_hidden"><img src="img/chambres/2.jpg" alt="Booking Room"></div>
+                            <div class="overflow_hidden"><img src="img/chambres/2.jpg" alt="Chambre Standard"></div>
                         </div>
                         <div class="room-info p-4">
                             <div class="down-line-left mb-3">
-                                <h6 class="title"><a class="text-secondary" href="#">Chambre Double</a></h6>
+                                <h6 class="title"><a class="text-secondary"
+                                        href="{{ route('chambres.standard') }}">Chambre Standard</a></h6>
                                 <span>Lit double</span>
                             </div>
-                            <div class="h5 per-night text-secondary">$120<small>/Nuit</small></div>
-                            <a href="#" class="btn btn-primary float-right">Réserver maintenant</a>
+                            <a href="{{ route('chambres.standard') }}" class="btn btn-primary float-right">Réserver
+                                </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Chambre Prestige de Luxe -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="room-thumb-grid-1 hover_zoom bg-white mb-4 shadow">
+                    <div class="room-thumb-grid-1 hover_zoom bg-white mb-4">
                         <div class="thumb-top position-relative">
                             <ul class="facility-icon upper-place-bottom-left">
-                                <li><i class="flaticon-hot-tea"></i></li>
                                 <li><i class="flaticon-tv"></i></li>
                                 <li><i class="flaticon-wifi"></i></li>
                             </ul>
-                            <div class="overflow_hidden"><img src="img/chambres/3.jpg" alt="Booking Room"></div>
+                            <div class="overflow_hidden"><img src="img/chambres/3.jpg" alt="Chambre Prestige de Luxe">
+                            </div>
                         </div>
                         <div class="room-info p-4">
                             <div class="down-line-left mb-3">
-                                <h6 class="title"><a class="text-secondary" href="#">Suite 2 Pièces</a></h6>
+                                <h6 class="title"><a class="text-secondary"
+                                        href="{{ route('chambres.prestige-de-luxe') }}">Chambre Prestige de Luxe</a></h6>
                                 <span>Lit double</span>
                             </div>
-                            <div class="h5 per-night text-secondary">$150<small>/Nuit</small></div>
-                            <a href="#" class="btn btn-primary float-right">Réserver maintenant</a>
+                            <a href="{{ route('chambres.prestige-de-luxe') }}"
+                                class="btn btn-primary float-right">Réserver </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chambre Prestige Vue sur la Mer -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="room-thumb-grid-1 hover_zoom bg-white mb-4">
+                        <div class="thumb-top position-relative">
+                            <ul class="facility-icon upper-place-bottom-left">
+                                <li><i class="flaticon-tv"></i></li>
+                                <li><i class="flaticon-wifi"></i></li>
+                            </ul>
+                            <div class="overflow_hidden"><img src="img/chambres/4.jpg"
+                                    alt="Chambre Prestige Vue sur la Mer"></div>
+                        </div>
+                        <div class="room-info p-4">
+                            <div class="down-line-left mb-3">
+                                <h6 class="title"><a class="text-secondary"
+                                        href="{{ route('chambres.prestige-vue-sur-la-mer') }}">Chambre Prestige Vue sur la
+                                        Mer</a></h6>
+                                <span>Lit double</span>
+                            </div>
+                            <a href="{{ route('chambres.prestige-vue-sur-la-mer') }}"
+                                class="btn btn-primary float-right">Réserver </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suite avec Vue sur la Piscine -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="room-thumb-grid-1 hover_zoom bg-white mb-4">
+                        <div class="thumb-top position-relative">
+                            <ul class="facility-icon upper-place-bottom-left">
+                                <li><i class="flaticon-tv"></i></li>
+                                <li><i class="flaticon-wifi"></i></li>
+                            </ul>
+                            <div class="overflow_hidden"><img src="img/chambres/5.jpg"
+                                    alt="Suite avec Vue sur la Piscine"></div>
+                        </div>
+                        <div class="room-info p-4">
+                            <div class="down-line-left mb-3">
+                                <h6 class="title"><a class="text-secondary"
+                                        href="{{ route('chambres.suite-vue-sur-la-piscine') }}">Suite avec Vue sur la
+                                        Piscine</a></h6>
+                                <span>Lit double</span>
+                            </div>
+                            <a href="{{ route('chambres.suite-vue-sur-la-piscine') }}"
+                                class="btn btn-primary float-right">Réserver </a>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Nouvelle ligne pour la section "Appartements" -->
             <div class="row">
@@ -234,7 +247,6 @@
                                 <h6 class="title"><a class="text-secondary" href="#">Studio</a></h6>
                                 <span>Lit double</span>
                             </div>
-                            <div class="h5 per-night text-secondary">$80<small>/Nuit</small></div>
                             <a href="#" class="btn btn-primary float-right">Réserver maintenant</a>
                         </div>
                     </div>
@@ -253,7 +265,6 @@
                                 <h6 class="title"><a class="text-secondary" href="#">Suite 2 Pièces</a></h6>
                                 <span>Lit double</span>
                             </div>
-                            <div class="h5 per-night text-secondary">$120<small>/Nuit</small></div>
                             <a href="#" class="btn btn-primary float-right">Réserver maintenant</a>
                         </div>
                     </div>
@@ -273,7 +284,6 @@
                                 <h6 class="title"><a class="text-secondary" href="#">Suite 3 Pièces</a></h6>
                                 <span>Lit double</span>
                             </div>
-                            <div class="h5 per-night text-secondary">$150<small>/Nuit</small></div>
                             <a href="#" class="btn btn-primary float-right">Réserver maintenant</a>
                         </div>
                     </div>
@@ -337,35 +347,67 @@
             <div class="row">
                 <div class="col-xl-4 col-md-6">
                     <div class="service-item-2 mb-4 bg-white">
-                        <i class="flaticon-hot-coffee-rounded-cup-on-a-plate-from-side-view"></i>
+                        <i class="flaticon-bed"></i> <!-- Icon updated for accommodation -->
                         <a class="service-link" href="service-details.html">
-                            <h5 class="text-secondery">Restaurant</h5>
+                            <h5 class="text-secondery">Hébergement (Chambres et Suites)</h5>
                         </a>
-                        <p>Nous avons un restaurant agréable, proposant des plats locaux.</p>
+                        <p>Nous proposons diverses chambres et suites confortables pour votre séjour.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-xl-4 col-md-6">
                     <div class="service-item-2 mb-4 bg-white">
-                        <i class="flaticon-musical-disc-and-dj-hand"></i>
+                        <i class="flaticon-conference"></i> <!-- Icon updated for meetings -->
                         <a class="service-link" href="service-details.html">
-                            <h5 class="text-secondery">Salle d'événements</h5>
+                            <h5 class="text-secondery">Salle de Réunion et Conférence</h5>
                         </a>
-                        <p>Grande salle d'événements avec capacité pour 100 personnes.</p>
+                        <p>Grande salle adaptée pour des réunions et conférences professionnelles.</p>
                     </div>
                 </div>
+    
+                <div class="col-xl-4 col-md-6">
+                    <div class="service-item-2 mb-4 bg-white">
+                        <i class="flaticon-hot-coffee-rounded-cup-on-a-plate-from-side-view"></i>
+                        <a class="service-link" href="service-details.html">
+                            <h5 class="text-secondery">Restauration</h5>
+                        </a>
+                        <p>Notre restaurant offre une sélection de plats locaux délicieux.</p>
+                    </div>
+                </div>
+    
                 <div class="col-xl-4 col-md-6">
                     <div class="service-item-2 mb-4 bg-white">
                         <i class="flaticon-swimming-figure"></i>
                         <a class="service-link" href="service-details.html">
                             <h5 class="text-secondery">Piscine</h5>
                         </a>
-                        <p>Piscine de haute qualité et événements aquatiques.</p>
+                        <p>Piscine de haute qualité pour des moments de détente et des événements aquatiques.</p>
+                    </div>
+                </div>
+    
+                <div class="col-xl-4 col-md-6">
+                    <div class="service-item-2 mb-4 bg-white">
+                        <i class="flaticon-bar"></i> <!-- Icon updated for bar -->
+                        <a class="service-link" href="service-details.html">
+                            <h5 class="text-secondery">Bar</h5>
+                        </a>
+                        <p>Un bar agréable pour profiter de boissons rafraîchissantes et de cocktails.</p>
+                    </div>
+                </div>
+    
+                <div class="col-xl-4 col-md-6">
+                    <div class="service-item-2 mb-4 bg-white">
+                        <i class="flaticon-car"></i> <!-- Icon for car rental -->
+                        <a class="service-link" href="service-details.html">
+                            <h5 class="text-secondery">Location de Voitures (À venir)</h5>
+                        </a>
+                        <p>Service de location de voitures pour faciliter vos déplacements.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <!-- Section "Nos Services" Fin -->
 
     <!-- Section "Nos Installations" Début -->
@@ -400,7 +442,7 @@
                             <div class="facility-item-1 py-20"> <i class="flaticon-wireless-connection"></i>
                                 <h5 class="mt-4">Facilité Wifi Gratuite</h5>
                                 <p>Tous nos clients et les personnes séjournant dans nos chambres bénéficient de la
-                                    connexion wifi gratuite, non disponible dans la chambre.</p>
+                                    connexion wifi gratuite.</p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -438,12 +480,14 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="firstname" placeholder="Nom" required>
+                                        <input type="text" class="form-control" name="firstname" placeholder="Nom"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Adresse Email" required>
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Adresse Email" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
@@ -465,22 +509,36 @@
                 </div>
                 <div class="col-md-4 offset-md-1 mt-xs-50">
                     <div class="icon-block-1 mb-5">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h6>Adresse du bureau</h6>
-                        <span>Boulevard de la Marina, Cotonou</span>
+                      <i class="fas fa-map-marker-alt"></i>
+                      <h6>Adresse de l'hôtel</h6>
+                      <span>
+                        <a href="https://maps.google.com/maps/dir//H%C3%B4tel+Les+Orchid%C3%A9es+Boulevard+de+la+Marina+Cotonou/@6.346382,2.4034403,17z/data=!4m5!4m4!1m0!1m2!1m1!1s0x1023545a320e6731:0x520d12fce5c01b2d" class="text-dark text-decoration-underline" target="_blank">
+                          Boulevard de la Marina, Cotonou
+                        </a>
+                      </span>
                     </div>
                     <div class="icon-block-1 mb-5">
-                        <i class="fas fa-envelope"></i>
-                        <h6>Adresse Email</h6>
-                        <span>helpdesk@info.com</span>
+                      <i class="fas fa-envelope"></i>
+                      <h6>Adresse Email</h6>
+                      <span>
+                        <a href="mailto:reservation@hotellesorchidees.com" class="text-dark text-decoration-underline">reservation@hotellesorchidees.com</a>
+                      </span>
+                      <span>
+                        <a href="mailto:contact@hotellesorchidees.com" class="text-dark text-decoration-underline">contact@hotellesorchidees.com</a>
+                      </span>
                     </div>
                     <div class="icon-block-1">
-                        <i class="fas fa-phone mr-1"></i>
-                        <h6>Numéro de téléphone</h6>
-                        <span>+229 61 41 20 20</span>
+                      <i class="fas fa-phone mr-1"></i>
+                      <h6>Numéros de téléphone</h6>
+                      <span>
+                        <a href="https://wa.me/22995965990" class="text-dark text-decoration-underline" target="_blank">+229 95 96 59 90</a>
+                        <a href="https://wa.me/22961412020" class="text-dark text-decoration-underline" target="_blank">+229 61 41 20 20</a>
+                      </span>
                     </div>
-                </div>
-                
+                  </div>
+                  
+                  
+
             </div>
         </div>
     </section>

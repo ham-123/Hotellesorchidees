@@ -30,7 +30,7 @@ class ContactFormMail extends Mailable
      */
     public function build()
     {
-        return $this->from('hamidtchemoko9@gmail.com')
+        return $this->from('contact@hotellesorchidees.com') // Mise à jour de l'adresse de l'expéditeur
                     ->subject($this->data['subject'])
                     ->markdown('emails.contact.contact-form', [
                         'firstname' => $this->data['firstname'],

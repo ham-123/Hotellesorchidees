@@ -5,27 +5,29 @@
 
 <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Hôtel Les Orchidées - Un hôtel de luxe offrant des services de qualité supérieure et une expérience inoubliable.">
-<meta name="author" content="Hamid TCHEMOKO A : https://www.linkedin.com/in/hamid-tchemoko-a-509075227/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Hôtel Les Orchidées - Un hôtel de luxe offrant des services de qualité supérieure et une expérience inoubliable.">
+    <meta name="author" content="Hamid TCHEMOKO A : https://www.linkedin.com/in/hamid-tchemoko-a-509075227/">
 
-<!-- SEO Meta Tags -->
-<meta name="keywords" content="hôtel, luxe, séjour, réservation, chambres, restaurant, services, vacances">
-<meta name="robots" content="index, follow">
-<meta name="language" content="fr">
-<meta name="revisit-after" content="7 days">
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="hôtel, luxe, séjour, réservation, chambres, restaurant, services, vacances">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="fr">
+    <meta name="revisit-after" content="7 days">
 
-<!-- Open Graph Meta Tags (for social media) -->
-<meta property="og:title" content="Hôtel Les Orchidées - Luxe et Confort">
-<meta property="og:description" content="Découvrez l'Hôtel Les Orchidées, un lieu de séjour luxueux offrant des chambres confortables, un restaurant gastronomique et des services de qualité supérieure.">
-<meta property="og:image" content="https://www.hotellesorchidees.com/img/bg-image/seo.jpg">
-<meta property="og:url" content="https://www.hotellesorchidees.com">
-<meta property="og:type" content="website">
+    <!-- Open Graph Meta Tags (for social media) -->
+    <meta property="og:title" content="Hôtel Les Orchidées - Luxe et Confort">
+    <meta property="og:description"
+        content="Découvrez l'Hôtel Les Orchidées, un lieu de séjour luxueux offrant des chambres confortables, un restaurant gastronomique et des services de qualité supérieure.">
+    <meta property="og:image" content="https://www.hotellesorchidees.com/img/bg-image/seo.jpg">
+    <meta property="og:url" content="https://www.hotellesorchidees.com">
+    <meta property="og:type" content="website">
 
 
-<!-- Favicons -->
-<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
     <!-- Font Link -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
@@ -51,19 +53,43 @@
                 <div class="top-header text-white icon-default py-3">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="float-left"><i class="fas fa-map-marker-alt"></i><span
-                                        class="pl-2">Boulevard de la Marina, Cotonou</span> </div>
+                            <div class="col-md-7 d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="pl-2 text-white">
+                                    Boulevard de la Marina, à côté du Palais des Congrès, à une minute de la statue Amazon
+                                    <a href="https://maps.google.com/maps/dir//H%C3%B4tel+Les+Orchid%C3%A9es+Boulevard+de+la+Marina+Cotonou/@6.346382,2.4034403,17z/data=!4m5!4m4!1m0!1m2!1m1!1s0x1023545a320e6731:0x520d12fce5c01b2d"
+                                       class="text-decoration-underline text-blue" target="_blank">
+                                        (voir localisation)
+                                    </a>
+                                </span>
                             </div>
-                            <div class="col-md-6">
-                                <ul class="float-right">
-                                    <li><i class="fas fa-envelope"></i><span class="pl-2">contact@hotellesorchidees.com</span></li>
-                                    <li><i class="fas fa-phone"></i><span class="pl-2">+229 61 41 20 20</span></li>
+                            
+                            
+                            <div class="col-md-5">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:contact@hotellesorchidees.com"
+                                            class="pl-2 text-white text-decoration-underline">
+                                            contact@hotellesorchidees.com
+                                        </a>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fas fa-phone"></i>
+                                        <a href="https://wa.me/22995965990"
+                                            class="pl-2 text-white text-decoration-underline" target="_blank">
+                                            +229 95 96 59 90
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
+
 
                 <div class="navbar-header">
                     <div class="container">
@@ -102,7 +128,7 @@
                                                 href="{{ route('contact') }}">Contact</a>
                                         </li>
                                     </ul>
-                                    <a class="btn btn-secondery-bg ml-2" href="booking-form.html">Réserver
+                                    <a class="btn btn-secondery-bg ml-2" href="{{('chambres')}}">Réserver
                                         maintenant</a>
                                 </div>
                             </nav>
@@ -121,33 +147,56 @@
             <footer class="full-row bg-secondery text-white footer-3 py-80" id="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="footer-widget get-in-touch icon-primary">
                                 <h4 class="widget-title down-line-left text-white">Contactez-nous</h4>
                                 <ul>
-                                    <li><i class="fas fa-map-marker-alt"></i>Boulevard de la Marina, Cotonou</li>
-                                    <li><a href="mailto:helpdesk@info.com"><i
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Boulevard de la Marina, Cotonou
+                                        </a>
+                                    </li>
+
+                                    <li><a href="mailto:contact@hotellesorchidees.com"><i
                                                 class="fas fa-envelope"></i>contact@hotellesorchidees.com</a></li>
-                                    <li><a href="callto:+229 61 41 20 20"><i class="fas fa-phone"></i>+229 61 41 20
-                                            20</a></li>
+                                    <li>
+                                        <a href="https://wa.me/22995965990" target="_blank" class="whatsapp-link">
+                                            <i class="fab fa-whatsapp"></i> +229 95 96 59 90
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/22961412020" target="_blank" class="whatsapp-link">
+                                            <i class="fab fa-whatsapp"></i> +229 61 41 20 20
+                                        </a>
+                                    </li>
+                                    <style>
+                                        .whatsapp-link {
+                                            display: inline-block;
+                                            width: 150px;
+                                        }
+                                    </style>
                                 </ul>
-                                <a href="#" class="btn btn-primary-bg">Réservez maintenant</a>
+                                <a href="{{ route('chambres') }}" class="btn btn-primary-bg">Réservez maintenant</a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="footer-widget quick-link">
                                 <h4 class="widget-title down-line-left text-white">Liens Rapides</h4>
                                 <ul>
-                                    <li><a href="#">Accueil</a></li>
-                                    <li><a href="#">Chambres</a></li>
-                                    <li><a href="#">Appartements</a></li>
-                                    <li><a href="#">Restaurant</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a class="{{ Request::is('/') ? 'active' : '' }}"
+                                            href="{{ url('/') }}">Accueil</a></li>
+                                    <li><a class="{{ Route::currentRouteNamed('chambres') ? 'active' : '' }}"
+                                            href="{{ route('chambres') }}">Chambres</a></li>
+                                    <li><a class="{{ Route::currentRouteNamed('appartements') ? 'active' : '' }}"
+                                            href="{{ route('appartements') }}">Appartements</a></li>
+                                    <li><a class="{{ Route::currentRouteNamed('restaurant') ? 'active' : '' }}"
+                                            href="{{ route('restaurant') }}">Restaurant</a></li>
+                                    <li><a class="{{ Route::currentRouteNamed('contact') ? 'active' : '' }}"
+                                            href="{{ route('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
-                            
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="footer-widget instagram">
                                 <h4 class="widget-title down-line-left text-white">Instagram</h4>
                                 <ul>
@@ -172,23 +221,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="footer-widget newsletter">
-                                <h4 class="widget-title down-line-left text-white">Newsletter</h4>
-                                <p>Feugiat tempus. Non aliquet moles tie vulputate. Elit ipsum sit pharetra. Nascetur
-                                    vulputate nam. Neque clas interdum.</p>
-                                <form action="#" method="post">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="mail"
-                                            placeholder="Votre Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="btn btn-primary-bg" type="submit"
-                                            value="Inscrivez-vous maintenant">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
@@ -196,20 +228,13 @@
                                 <ul class="social-media mt-5">
                                     <li><a href="https://www.facebook.com/HotelLesOrchidees"><i
                                                 class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                    </li>
-                                    <li><a href="https://plus.google.com/"><i class="fab fa-google-plus-g"></i></a>
-                                    </li>
-                                    <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
-                                    </li>
-                                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
+
             <!-- Fin de la Section du Pied de Page -->
 
             <!-- Début de la Section des Droits d'Auteur -->

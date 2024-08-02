@@ -59,6 +59,7 @@
                         <div class="text-block-4">
                             <h5>Appelez-nous</h5>
                             <span>(+229) 61 41 20 20</span>
+                            <span>(+229) 95 96 59 90</span>
                         </div>
                         <ul class="social-media-3">
                             <li><a href="#"></a></li>
@@ -66,8 +67,7 @@
                         <ul class="social-media-3 mt-5 clearfix">
                             <li><a href="https://www.facebook.com/HotelLesOrchidees"><i class="fab fa-facebook-f"></i></a>
                             </li>
-                            <li><a href="https://plus.google.com/"><i class="fab fa-google-plus-g"></i></a></li>
-                            <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a></li>
+                            
                         </ul>
                     </div>
                 </div>

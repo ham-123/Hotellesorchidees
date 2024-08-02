@@ -37,8 +37,7 @@
                         transporter dans un voyage gastronomique inoubliable, où chaque repas est une expérience bénie,
                         conçu pour élever vos sens et nourrir votre âme.</p>
                     <div class="mt-4 introduce-block-1 text-secondary">
-                        <div class="name">Reamina & Colliens Green</div>
-                        <div class="designation">Fondateur du Restaurant</div>
+                     
                     </div>
                 </div>
             </div>
